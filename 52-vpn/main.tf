@@ -1,3 +1,8 @@
+resource "aws_key_pair" "openvpn" {
+  key_name   = "openvpn"
+  public_key = file("~/.ssh/openvpn.pub")
+}
+
 module "vpn" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   ami = local.ami_id

@@ -252,3 +252,12 @@ resource "aws_security_group_rule" "backend_vpn" {
   source_security_group_id = module.vpn_sg.id
   security_group_id = module.backend_sg.id
 }
+
+resource "aws_security_group_rule" "backend_vpn22"{
+  type              = "ingress"
+  from_port         = 22
+  to_port           = 22
+  protocol          = "tcp"
+  source_security_group_id = module.vpn_sg.id
+  security_group_id = module.backend_sg.id
+}
