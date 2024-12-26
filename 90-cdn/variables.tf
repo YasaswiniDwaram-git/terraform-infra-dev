@@ -14,10 +14,13 @@ variable "common_tags" {
     }
 }
 
+variable "cdn_tags" {
+    default = "expense"
+    }
 
-variable "backend_tags" {
+variable "frontend_tags" {
     default = {
-        Component = "backend"
+        Component = "frontend"
     }
 }
 

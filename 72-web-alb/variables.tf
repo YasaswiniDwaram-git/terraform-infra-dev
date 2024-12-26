@@ -14,13 +14,12 @@ variable "common_tags" {
     }
 }
 
-
-variable "backend_tags" {
-    default = {
-        Component = "backend"
-    }
-}
-
 variable "zone_name" {
     default = "yashd.icu"
+}
+
+variable "web_alb_tags" {
+    default = {
+        Component = "web_alb"
+    }
 }

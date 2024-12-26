@@ -22,9 +22,3 @@ module "vpn" {
     }
   )
 } 
-
-#key is already created in .ssh of home folder with openvpn name using ssh-keygen -f openvpn
-resource "aws_key_pair" "openvpn" {
-  key_name   = "openvpn"
-  public_key = file("~/.ssh/openvpn.pub")
-}
